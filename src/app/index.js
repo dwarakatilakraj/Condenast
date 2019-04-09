@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDom from "react-dom";
-import Datastatus from "./app";
+import App from "./app";
+import { createStore } from "redux";
+import { Provider } from"react-redux";
+import rootReducer from "./rootReducer"
+const store= createStore(rootReducer);
 
-
-ReactDom.render(<Datastatus />, document.getElementById("data-wrapper"));
+ReactDom.render(<App />, document.getElementById("root"));
